@@ -53,11 +53,6 @@ node -v
 # Install Yarn
 npm install -g yarn
 yarn -v
-
-# Alternative Yarn installation
-curl -o- -L https://yarnpkg.com/install.sh | bash
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-source ~/.bashrc
 ```
 
 ### 🖥️ 5. Create Screen Session
