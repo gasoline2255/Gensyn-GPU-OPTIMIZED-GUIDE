@@ -1,8 +1,8 @@
 # 🚀 Gensyn GPU Optimized vLLM Guide
 
-**Optimized setup for running 1.5B and 1.7B models on RTX 3090, 4090, or any GPU with ≥24GB VRAM**
+**Optimized setup for running 1.5B on RTX 3090, 4090, or any GPU with ≥24GB VRAM**
 
-⚡️ **Solves CUDA out of memory errors** for large language models on consumer GPUs
+⚡️ **Solves CUDA out of memory errors** for large models like 1.5B.
 
 ---
 
@@ -12,12 +12,17 @@
 
 ---
 
-## �� Prerequisites
+## 🔑 Checklist
 
-* ✅ GPU with ≥24GB VRAM (RTX 3090, 4090, or any GPU with ≥24GB VRAM
-* ✅ Python
-* ✅ 24GB VRAM recommended
-* ✅ Your backed up `.pem` file (if upgrading)
+✅ A GPU with at least 24GB VRAM (RTX 3090, 4090, or equivalent)
+
+✅ Python 3.10+ installed and working
+
+✅ Backed-up .pem key file (required if upgrading an existing node)
+
+✅ Stable internet connection to sync and run tasks smoothly
+
+✅ 24GB VRAM + Minimum 32GB system RAM recommended for running large models without crashes
 
 ---
 
@@ -134,48 +139,41 @@ lt --port 3000
 apt-get update && apt-get install -y openssh-client
 ssh -o StrictHostKeyChecking=no -R 80:localhost:3000 nokey@localhost.run
 ```
+---
 
-## ⚡ Performance Optimizations
+## 🎯 Recommended 1.5B Models
 
-### 🎯 GPU Memory Optimization
+**Optimized models that work perfectly with this setup:**
 
-This setup is specifically optimized for:
+* `nvidia/Nemotron-Research-Reasoning-Qwen-1.5B`
+* `nvidia/AceInstruct-1.5B`
+* `Gensyn/Qwen2.5-1.5B-Instruct`
+
+These models are some specifically tested and optimized for 24GB VRAM GPUs.
+
+---
+
+### 🎯This setup is specifically optimized for:
+
 - **RTX 3090** (24GB VRAM)
 - **RTX 4090** (24GB VRAM)
-
-The setup automatically enables:
-- ✅ **vLLM integration** for faster inference
-- ✅ **FP16 precision** to reduce memory usage
-- ✅ **Gradient checkpointing** for memory efficiency
-- ✅ **Optimized batch sizes** for large models
-
-### Import Errors
-
-```bash
-# Reinstall dependencies
-cd genrl && pip install -e . && cd ..
-```
-
-### Screen Session Issues
-
-```bash
-# List all screen sessions
-screen -ls
-
-# Reconnect to your session
-screen -r gensyn
-```
+- **Higher Model Gpu's as well**
 
 ---
 
 ## ✅ You're Done!
 
-Your **GPU-optimized Gensyn RL-Swarm** is now running with:
+## ⚡ Performance Optimizations
 
-- ✅ **vLLM integration** for 10x faster inference
-- ✅ **Memory optimizations** for large models
-- ✅ **1.5B and 1.7B model support** on consumer GPUs
-- ✅ **Complete training environment** ready to use
+�� **vLLM integration** delivers significantly faster inference speeds
+
+🎯 **bfloat16 precision** reduces memory usage while maintaining stability
+
+🔥 **Increase num_train_samples** to push your GPU utilization higher
+
+📦 **Batch size tuning** optimized for 1.5B parameter models
+
+💻 **Designed for 24GB GPUs** like RTX 3090 / 4090 for smooth training
 
 ---
 
@@ -199,4 +197,8 @@ screen -r gensyn
 
 **Happy Training! 🚀**
 
-*This guide solves CUDA out of memory errors for large language models on consumer GPUs.*
+**Show us your results!** Tag [@gasoline2255](https://x.com/gasoline2255) if this guide helped you successfully run 1.5B models on your GPU.
+
+**Need help?** Contact me if you encounter any errors or have questions about the setup.
+
+*Made with ❤️ for the Gensyn community*
