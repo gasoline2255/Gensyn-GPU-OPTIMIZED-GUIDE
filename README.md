@@ -97,13 +97,13 @@ git clone https://github.com/gasoline2255/genrl
 
 ---
 
-## �� 6. Restore Your Key
+## 🔑 6. Restore Your Key
 
 **Important:** Make sure to add your `.pem` file inside the `gensyn-testnet` folder:
 
 ---
 
-## �� 7. Set Up Python Environment and Install vLLM
+## ⚡ 7. Set Up Python Environment and Install vLLM
 
 ```bash
 python3 -m venv .venv
@@ -127,7 +127,7 @@ Waiting for localhost:3000...
 
 ## 🌐 9. Expose Your Service (Optional)
 
-### �� Option A: LocalTunnel
+### 🔒 Option A: LocalTunnel
 
 ```bash
 npm install -g localtunnel
@@ -165,7 +165,7 @@ These models are some specifically tested and optimized for 24GB VRAM GPUs.
 
 ## ⚡ Performance Optimizations
 
-�� **vLLM integration** delivers significantly faster inference speeds
+🆕 **vLLM integration** delivers significantly faster inference speeds
 
 🎯 **bfloat16 precision** reduces memory usage while maintaining stability
 
